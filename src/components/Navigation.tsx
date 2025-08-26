@@ -31,45 +31,48 @@ const Navigation = () => {
 
   return (
     <>
-      {/* Centered Icon Navigation */}
-      <nav className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${
-        scrolled ? "top-2" : "top-4"
-      }`}>
-        <div className={`flex items-center space-x-1 px-3 py-2 rounded-full transition-all duration-300 ${
-          scrolled 
-            ? "bg-background/90 backdrop-blur-md border border-border/50 shadow-lg" 
-            : "bg-background/20 backdrop-blur-sm border border-border/20"
-        }`}>
-          {navIcons.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="relative group p-3 rounded-full transition-all duration-300 hover:bg-primary/10"
-              aria-label={item.label}
-            >
-              <item.icon 
-                size={20} 
-                className="text-foreground/70 group-hover:text-primary transition-colors duration-300" 
-              />
-              
-              {/* Tooltip */}
-              <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-background/90 border border-border/50 rounded text-xs text-foreground/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
-                {item.label}
-              </div>
-            </a>
-          ))}
-        </div>
-      </nav>
-
-      {/* Mobile Menu Button */}
-      <Button
-        variant="ghost"
-        size="sm"
-        className="fixed top-4 right-4 z-50 md:hidden bg-background/20 backdrop-blur-sm border border-border/20 hover:bg-background/40"
-        onClick={() => setIsOpen(!isOpen)}
+      {/* Centered Icon Navigation - Only Desktop */}
+<nav 
+  className={`hidden md:flex fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${
+    scrolled ? "top-2" : "top-4"
+  }`}
+>
+  <div className={`flex items-center space-x-1 px-3 py-2 rounded-full transition-all duration-300 ${
+    scrolled 
+      ? "bg-background/90 backdrop-blur-md border border-border/50 shadow-lg" 
+      : "bg-background/20 backdrop-blur-sm border border-border/20"
+  }`}>
+    {navIcons.map((item) => (
+      <a
+        key={item.label}
+        href={item.href}
+        className="relative group p-3 rounded-full transition-all duration-300 hover:bg-primary/10"
+        aria-label={item.label}
       >
-        {isOpen ? <X size={20} /> : <Menu size={20} />}
-      </Button>
+        <item.icon 
+          size={20} 
+          className="text-foreground/70 group-hover:text-primary transition-colors duration-300" 
+        />
+        
+        {/* Tooltip */}
+        <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-background/90 border border-border/50 rounded text-xs text-foreground/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+          {item.label}
+        </div>
+      </a>
+    ))}
+  </div>
+</nav>
+
+{/* Mobile Menu Button */}
+<Button
+  variant="ghost"
+  size="sm"
+  className="fixed top-4 right-4 z-50 md:hidden bg-background/20 backdrop-blur-sm border border-border/20 hover:bg-background/40"
+  onClick={() => setIsOpen(!isOpen)}
+>
+  {isOpen ? <X size={20} /> : <Menu size={20} />}
+</Button>
+
 
       {/* Mobile Navigation */}
       {isOpen && (
