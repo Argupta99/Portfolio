@@ -1,28 +1,52 @@
-const Skills = () => {
-  const skills = [
-    { name: "HTML", icon: "🟧" },
-    { name: "CSS", icon: "🔵" },
-    { name: "JavaScript", icon: "🟡" },
-    { name: "TypeScript", icon: "🔷" },
-    { name: "React", icon: "⚛️" },
-    { name: "Next.js", icon: "⚫" },
-    { name: "Node.js", icon: "🟢" },
-    { name: "Express.js", icon: "🚂" },
-    { name: "MongoDB", icon: "🍃" },
-    { name: "Tailwind CSS", icon: "💨" },
-    { name: "Shadcn", icon: "🎨" },
-    { name: "Bootstrap", icon: "🟣" },
-    { name: "Socket.io", icon: "🔌" },
-    { name: "Git", icon: "📝" },
-    { name: "GitHub", icon: "🐱" },
-    { name: "Vite", icon: "⚡" },
-    { name: "Parcel", icon: "📦" },
-    { name: "Figma", icon: "🎯" },
-    { name: "Framer", icon: "🖼️" },
-    { name: "WordPress", icon: "🌐" },
-    { name: "Wix", icon: "🔷" },
-  ];
+// skills.ts
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiTailwindcss,
+  SiBootstrap,
+  SiSocketdotio,
+  SiGit,
+  SiGithub,
+  SiVite,
+  SiFigma,
+  SiFramer,
+  SiWordpress,
+  SiWix
+} from "react-icons/si";
+import { Palette } from "lucide-react"; // for Shadcn (custom icon)
 
+// Array of skills with icons
+export const skills = [
+  { name: "HTML", icon: <SiHtml5 color="#E34F26" /> },
+  { name: "CSS", icon: <SiCss3 color="#1572B6" /> },
+  { name: "JavaScript", icon: <SiJavascript color="#F7DF1E" /> },
+  { name: "TypeScript", icon: <SiTypescript color="#3178C6" /> },
+  { name: "React", icon: <SiReact color="#61DAFB" /> },
+  { name: "Next.js", icon: <SiNextdotjs color="black" /> },
+  { name: "Node.js", icon: <SiNodedotjs color="#339933" /> },
+  { name: "Express.js", icon: <SiExpress color="gray" /> },
+  { name: "MongoDB", icon: <SiMongodb color="#47A248" /> },
+  { name: "Tailwind CSS", icon: <SiTailwindcss color="#06B6D4" /> },
+  { name: "Shadcn", icon: <Palette color="#9333ea" /> },
+  { name: "Bootstrap", icon: <SiBootstrap color="#7952B3" /> },
+  { name: "Socket.io", icon: <SiSocketdotio color="black" /> },
+  { name: "Git", icon: <SiGit color="#F05032" /> },
+  { name: "GitHub", icon: <SiGithub color="black" /> },
+  { name: "Vite", icon: <SiVite color="#646CFF" /> },
+  { name: "Figma", icon: <SiFigma color="#F24E1E" /> },
+  { name: "Framer", icon: <SiFramer color="#0055FF" /> },
+  { name: "WordPress", icon: <SiWordpress color="#21759B" /> },
+  { name: "Wix", icon: <SiWix color="#0C6EFC" /> },
+];
+
+const Skills = () => {
   return (
     <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/20">
       <div className="max-w-6xl mx-auto">
