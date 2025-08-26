@@ -1,6 +1,6 @@
 import profileImg from "../images/portfolioimg.jpeg";
 import { MapPin, GraduationCap, Briefcase } from "lucide-react";
-
+import Skills from "./Skills";
 const About = () => {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative">
