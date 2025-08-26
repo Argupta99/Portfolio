@@ -73,7 +73,10 @@ const Contact = () => {
         {/* Contact Form */}
         <div className="max-w-2xl mx-auto">
           <div className="interactive-hover glow-on-hover">
-            <form className="space-y-6 p-8 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm">
+            <form 
+           action= "https://formsubmit.co/dasguptaarpita1999@gmail.com"
+            method="POST"
+            className="space-y-6 p-8 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm">
               <div className="text-center mb-6">
                 <h4 className="text-xl font-semibold mb-2">Send Me a Message</h4>
                 <p className="text-muted-foreground text-sm">Fill out the form below and I'll get back to you soon</p>
