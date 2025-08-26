@@ -3,7 +3,7 @@ import { ExternalLink, GithubIcon } from "lucide-react";
 import Cabsy from "../images/Cabsy.png";
 import StudySkills from "../images/Study-Skills.png";
 import Taaza from "../images/Taaza.png";
-import ThemeSwitcher from "../images/Theme-Switcher.png";
+
 import webllm from "../images/web llm ai.png";
 
 
@@ -49,16 +49,7 @@ const Projects = () => {
       featured: false
     },
 
-    {
-      id: 3,
-      title: "Theme Switcher",
-      description: "The Theme Switcher App is a customizable web application built with React, TypeScript, Tailwind CSS, HTML, and JavaScript, allowing users to switch between multiple themes with smooth transitions and responsive design.",
-      image: ThemeSwitcher,
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Html", "JavaScript"],
-      githubUrl: "https://github.com/Argupta99/theme-switcher-app",
-      liveUrl: "https://theme-switcher-apps.netlify.app/",
-      featured: false
-    }
+    
 
   ];
 
