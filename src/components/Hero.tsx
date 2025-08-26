@@ -17,7 +17,7 @@ const Hero = () => {
         </h1>
         
         <h2 className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-8 font-light">
-          Fontend Developer
+          Frontend Developer
         </h2>
         
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
@@ -36,14 +36,15 @@ const Hero = () => {
             </a>
           </Button>
           
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="border-border/50 hover:border-primary/50 px-8 py-3 rounded-full"
-          >
-            <Download className="mr-2 h-4 w-4" />
-            Download Resume
-          </Button>
+          <a
+        href="/resume/resume_arpita__.pdf"
+        download="Arpita_Resume.pdf"
+      >
+        <Button className="px-6 py-3 flex items-center gap-2">
+          Download Resume
+          <Download className="h-4 w-4" />
+        </Button>
+      </a>
         </div>
       </div>
     </section>
